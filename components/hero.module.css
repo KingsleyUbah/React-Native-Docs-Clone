@@ -16,4 +16,7 @@
     margin-top: 15px;
     align-self: baseline;    
 }
-  
+.herolink {
+  color: '#5086B1';
+  text-decoration: underline;
+}

@@ -1,0 +1,19 @@
+.hero {    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9AD5E7;
+    padding: 8px 20px;
+    margin: 12px 0 0;
+    height: 140px;
+    font-size: 17px;
+    overflow: hidden;
+  }
+
+.image {
+    height: 300px;
+    width: 300px;
+    margin-top: 15px;
+    align-self: baseline;    
+}
+  

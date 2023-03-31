@@ -1,8 +1,12 @@
 import {useState} from 'react'
 import styles from './tooltip.module.css'
+import data from '../pages/data'
+import {id} from '../pages/basics/getting-started.mdx'
 
-function MyTooltip() {
-    let content = "While we do our best to assume no prior knowledge of React, Android, or iOS development, these are valuable topics of study for the aspiring React Native developer. Where sensible, we have linked to resources and articles that go more in depth."
+let result = data.filter(item => item.id == id)
+console.log(result)
+
+function MyTooltip({content}) {      
     return (
       <div className={styles.tooltip}>        
         {content}
@@ -11,5 +15,5 @@ function MyTooltip() {
   }
 
   export default function MyApp() {
-    return <MyTooltip />
+    return <MyTooltip content={result[0].text}/>
   }

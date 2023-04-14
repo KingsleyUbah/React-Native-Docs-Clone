@@ -1,7 +1,47 @@
 {  
   "basics": "The Basics",
-  "contact": {
-    "title": "Contact ↗",
+  "company": {
+    "title": "Development",
+    "type": "menu",
+    "items": {
+      "guides": {
+        "title": "Guides",
+        "href": "https://twitter.com/shuding_"
+      },
+      "components": {
+        "title": "Components",
+        "href": "https://twitter.com/shuding_"
+      },
+      "api": {
+        "title": "API",
+        "href": "https://twitter.com/shuding_"
+      },
+      "architecture": {
+        "title": "Architecture",
+        "href": "https://twitter.com/shuding_"
+      }
+    }
+  },
+  "contributing": {
+    "title": "Contributing",
+    "type": "page",
+    "href": "https://twitter.com/shuding_",
+    "newWindow": true
+  },
+  "community": {
+    "title": "Community",
+    "type": "page",
+    "href": "https://twitter.com/shuding_",
+    "newWindow": true
+  },
+  "showcase": {
+    "title": "Showcase",
+    "type": "page",
+    "href": "https://twitter.com/shuding_",
+    "newWindow": true
+  },
+  "blog": {
+    "title": "Blog",
     "type": "page",
     "href": "https://twitter.com/shuding_",
     "newWindow": true

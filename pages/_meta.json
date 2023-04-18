@@ -1,5 +1,6 @@
 {  
   "basics": "The Basics",
+  "environment-setup": "Environment setup",
   "company": {
     "title": "Development",
     "type": "menu",

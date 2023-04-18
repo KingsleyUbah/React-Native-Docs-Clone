@@ -1,0 +1,120 @@
+# React Fundamentals
+React Native runs on React, a popular open source library for building user interfaces with JavaScript. To make the most of React Native, it helps to understand React itself. This section can get you started or can serve as a refresher course.
+
+We’re going to cover the core concepts behind React:
+
+- components
+- JSX
+- props
+- state
+
+If you want to dig deeper, we encourage you to check out React’s official documentation.
+
+## Your first component
+The rest of this introduction to React uses cats in its examples: friendly, approachable creatures that need names and a cafe to work in. Here is your very first Cat component:
+
+import CodeTab from '../../components/codetab'
+
+<CodeTab />
+
+You additionally import Component from React:
+```js
+import React, {Component} from 'react';
+```
+
+Your component starts as a class extending Component instead of as a function:
+```js
+class Cat extends Component {}
+```
+
+Class components have a render() function. Whatever is returned inside it is rendered as a React element:
+
+```js
+class Cat extends Component {
+  render() {
+    return <Text>Hello, I am your cat!</Text>;
+  }
+}
+```
+
+And as with function components, you can export your class component:
+```js
+class Cat extends Component {
+  render() {
+    return <Text>Hello, I am your cat!</Text>;
+  }
+}
+
+export default Cat;
+```
+import styles from '../../components/tooltip.module.css'
+
+export function Tooltip({content}) {      
+    return (
+      <div className={styles.tooltip}>        
+        {content}
+      </div>
+    )
+}
+
+<Tooltip content={"This is one of many ways to export your component. This kind of export works well with the Snack Player. However, depending on your app’s file structure, you might need to use a different convention. This handy cheatsheet on JavaScript imports and exports can help."}/>
+
+Now take a closer look at that return statement. `<Text>Hello, I am your cat!</Text>` is using a kind of JavaScript syntax that makes writing elements convenient: JSX.
+
+## JSX
+React and React Native use JSX, a syntax that lets you write elements inside JavaScript like so: `<Text>Hello, I am your cat!</Text>`. The React docs have a comprehensive guide to JSX you can refer to learn even more. Because JSX is JavaScript, you can use variables inside it. Here you are declaring a name for the cat, name, and embedding it with curly braces inside `<Text>`.
+
+```js
+import React from 'react';
+import {Text} from 'react-native';
+
+const Cat = () => {
+  const name = 'Maru';
+  return <Text>Hello, I am {name}!</Text>;
+};
+
+export default Cat;
+```
+Any JavaScript expression will work between curly braces, including function calls like `{getFullName("Rum", "Tum", "Tugger")}`:
+
+<CodeTab />
+
+You can think of curly braces as creating a portal into JS functionality in your JSX!
+
+<Tooltip content={"Because JSX is included in the React library, it won’t work if you don’t have import React from 'react' at the top of your file!"}/>
+
+## Custom Components
+You’ve already met React Native’s Core Components. React lets you nest these components inside each other to create new components. These nestable, reusable components are at the heart of the React paradigm.
+
+For example, you can nest Text and TextInput inside a View below, and React Native will render them together:
+
+```js
+import React from 'react';
+import {Text, TextInput, View} from 'react-native';
+
+const Cat = () => {
+  return (
+    <View>
+      <Text>Hello, I am...</Text>
+      <TextInput
+        style={{
+          height: 40,
+          borderColor: 'gray',
+          borderWidth: 1,
+        }}
+        defaultValue="Name me!"
+      />
+    </View>
+  );
+};
+
+export default Cat;
+```
+
+Any component that renders other components is a parent component. Here, Cafe is the parent component and each Cat is a child component.
+
+You can put as many cats in your cafe as you like. Each `<Cat>` renders a unique element—which you can customize with props.
+
+import Button from '../../components/btn'
+
+<Button />

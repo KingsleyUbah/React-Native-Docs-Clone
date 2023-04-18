@@ -1,7 +1,5 @@
 import {useState, useEffect} from 'react'
 import styles from './tab.module.css'
-import FUNCTIONBLOCK from '../code/function.md'
-import CLASSBLOCK from '../code/class.md'
 import Markdown from 'markdown-to-jsx'
 
 function CodeTabs() {  

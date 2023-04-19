@@ -26,7 +26,36 @@ const config: DocsThemeConfig = {
   },  
   docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
   footer: {
-    text: 'Nextra Docs Template',
+    component: (
+      <div style={{ display: 'flex', fontSize: 'big', alignItems:'center', justifyContent: 'space-around', maxWidth: '100%', backgroundColor: '#20232A', color: 'white', padding: '23px 2rem' }}>
+        <div>
+          <h3 style={{color: 'gray', marginBottom: '10px'}}>DEVELOP</h3>
+          <ul>
+            <li><a href=''>Guides</a></li>
+            <li><a href=''>Components</a></li>
+            <li><a href=''>APIs</a></li>
+            <li><a href=''>Architecture</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 style={{color: 'gray', marginBottom: '10px'}}>FIND US</h3>
+          <ul>
+            <li><a href=''>Blog</a></li>
+            <li><a href=''>Twitter</a></li>
+            <li><a href=''>GitHub</a></li>            
+          </ul>
+        </div>
+        <div>
+          <h3 style={{color: 'gray', marginBottom: '10px'}}>PARTICIPATE</h3>
+          <ul>
+            <li><a href=''>Showcase</a></li>
+            <li><a href=''>Community</a></li>
+            <li><a href=''>Contributing</a></li>
+            <li><a href=''>Guides</a></li>
+          </ul>
+        </div>
+    </div>
+    )
   },
 }
 

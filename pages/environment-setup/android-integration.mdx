@@ -10,3 +10,7 @@ You can render your React Native component into a Fragment instead of a full scr
 You will need to implement the `ReactApplication` interface in your main Application `Java/Kotlin` class. If you have created a new project from Android Studio with a default activity, you will need to create a new class (e.g. `MyReactApplication.java` or `MyReactApplication.kt`). If it is an existing class you can find this main class in your `AndroidManifest.xml` file. Under the `<application />` tag you should see a property `android:name` e.g. `android:name=".MyReactApplication"`. This value is the class you want to implement and provide the required methods to.
 
 Ensure your main Application class implements ReactApplication:
+
+import Feedback from '../../components/feedback'
+
+<Feedback />

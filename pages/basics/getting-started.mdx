@@ -1,7 +1,6 @@
 # Introduction
 
 import Hero from '../../components/hero'
-import {useState} from 'react'
 
 <Hero />
 
@@ -13,9 +12,9 @@ You can start here and read through these docs linearly like a book; or you can 
 ## Prerequisites
 To work with React Native, you will need to have an understanding of JavaScript fundamentals. If you’re new to JavaScript or need a refresher, you can dive in or brush up at Mozilla Developer Network.
 
-import styles from '../../components/tooltip.module.css'
+import styles from '../../components/callout.module.css'
 
-export function Tooltip({content}) {      
+export function Callout({content}) {      
     return (
       <div className={styles.tooltip}>        
         {content}
@@ -23,7 +22,7 @@ export function Tooltip({content}) {
     )
 }
 
-<Tooltip content={"While we do our best to assume no prior knowledge of React, Android, or iOS development, these are valuable topics of study for the aspiring React Native developer. Where sensible, we have linked to resources and articles that go more in depth."}/>
+<Callout content={"While we do our best to assume no prior knowledge of React, Android, or iOS development, these are valuable topics of study for the aspiring React Native developer. Where sensible, we have linked to resources and articles that go more in depth."}/>
 
 ## Interactive examples
 This introduction lets you get started immediately in your browser with interactive examples like this one:
@@ -49,25 +48,78 @@ export default YourApp;
 ```
 The above is a Snack Player. It’s a handy tool created by Expo to embed and run React Native projects and share how they render in platforms like Android and iOS. The code is live and editable, so you can play directly with it in your browser. Go ahead and try changing the "Try editing me!" text above to "Hello, world!"
 
-<Tooltip content={"Optionally, if you want to setup a local development environment, you can follow our guide to setting up your environment on your local machine and paste the code examples into your App.js file there. (If you are a web developer, you may already have a local environment set up for mobile browser testing!)"}/>
+<Callout content={"Optionally, if you want to setup a local development environment, you can follow our guide to setting up your environment on your local machine and paste the code examples into your App.js file there. (If you are a web developer, you may already have a local environment set up for mobile browser testing!)"}/>
 
 ## Function Components and Class Components
 With React, you can make components using either classes or functions. Originally, class components were the only components that could have state. But since the introduction of React's Hooks API, you can add state and more to function components.
 
 Hooks were introduced in React Native 0.59., and because Hooks are the future-facing way to write your React components, we wrote this introduction using function component examples. Where useful, we also cover class components under a toggle like so:
 
-import CodeTab from '../../components/codetab'
+import { Tab, Tabs } from 'nextra-theme-docs'
+ 
+<Tabs items={['Functional Component', 'Class Component']}>
+  <Tab>
+    ```js
+    import React from 'react';
+    import {Text, View} from 'react-native';
 
-<CodeTab />
+    const HelloWorldApp = () => {
+      return (
+        <View
+          style={{
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <Text>Hello, world!</Text>
+        </View>
+      );
+    };
+
+    export default HelloWorldApp;
+    ```
+  </Tab>
+  <Tab>
+    ```js
+    import React, {Component} from 'react';
+    import {Text, View} from 'react-native';
+
+    class HelloWorldApp extends Component {
+      render() {
+        return (
+          <View
+            style={{
+              flex: 1,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <Text>Hello, world!</Text>
+          </View>
+        );
+      }
+    }
+
+    export default HelloWorldApp;
+    ```
+  </Tab>  
+</Tabs>
 
 You can find more examples of class components in previous versions of this documentation.
 
 ## Developer Notes
 People from many different development backgrounds are learning React Native. You may have experience with a range of technologies, from web to Android to iOS and more. We try to write for developers from all backgrounds. Sometimes we provide explanations specific to one platform or another like so:
-
-import Tab from '../../components/tab'
-
-<Tab />
+ 
+<Tabs items={['Android', 'iOS', 'Web']}>
+  <Tab>
+    <Callout content={"Android developers may be familiar with this concept."}/>
+  </Tab>
+  <Tab>
+    <Callout content={"iOS developers may be familiar with this concept."}/>
+  </Tab>
+  <Tab>
+    <Callout content={"Web developers may be familiar with this concept."}/>
+  </Tab>
+</Tabs>
 
 ## Formatting
 Menu paths are written in bold and use carets to navigate submenus. Example: **Android Studio > Preferences**
@@ -77,6 +129,6 @@ Menu paths are written in bold and use carets to navigate submenus. Example: **A
 
 Now that you know how this guide works, it's time to get to know the foundation of React Native: Native Components.
 
-import Button from '../../components/btn'
+import Feedback from '../../components/feedback'
 
-<Button />
+<Feedback />

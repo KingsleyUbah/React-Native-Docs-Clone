@@ -13,9 +13,36 @@ If you want to dig deeper, we encourage you to check out React’s official docu
 ## Your first component
 The rest of this introduction to React uses cats in its examples: friendly, approachable creatures that need names and a cafe to work in. Here is your very first Cat component:
 
-import CodeTab from '../../components/codetab'
+import { Tab, Tabs } from 'nextra-theme-docs'
+ 
+<Tabs items={['Functional Component', 'Class Component']}>
+  <Tab>
+    ```js
+    import React from 'react';
+    import {Text} from 'react-native';
 
-<CodeTab />
+    const Cat = () => {
+      return <Text>Hello, I am your cat!</Text>;
+    };
+
+    export default Cat;
+    ```
+  </Tab>
+  <Tab>
+    ```js
+    import React, {Component} from 'react';
+    import {Text} from 'react-native';
+
+    class Cat extends Component {
+      render() {
+        return <Text>Hello, I am your cat!</Text>;
+      }
+    }
+
+    export default Cat;
+    ```
+  </Tab>  
+</Tabs>
 
 You additionally import Component from React:
 ```js
@@ -47,9 +74,9 @@ class Cat extends Component {
 
 export default Cat;
 ```
-import styles from '../../components/tooltip.module.css'
+import styles from '../../components/callout.module.css'
 
-export function Tooltip({content}) {      
+export function Callout({content}) {      
     return (
       <div className={styles.tooltip}>        
         {content}
@@ -57,7 +84,7 @@ export function Tooltip({content}) {
     )
 }
 
-<Tooltip content={"This is one of many ways to export your component. This kind of export works well with the Snack Player. However, depending on your app’s file structure, you might need to use a different convention. This handy cheatsheet on JavaScript imports and exports can help."}/>
+<Callout content={"This is one of many ways to export your component. This kind of export works well with the Snack Player. However, depending on your app’s file structure, you might need to use a different convention. This handy cheatsheet on JavaScript imports and exports can help."}/>
 
 Now take a closer look at that return statement. `<Text>Hello, I am your cat!</Text>` is using a kind of JavaScript syntax that makes writing elements convenient: JSX.
 
@@ -77,11 +104,48 @@ export default Cat;
 ```
 Any JavaScript expression will work between curly braces, including function calls like `{getFullName("Rum", "Tum", "Tugger")}`:
 
-<CodeTab />
+<Tabs items={['TypeScript', 'JavaScript']}>
+  <Tab>
+    ```js
+    import React from 'react';
+    import {Text} from 'react-native';
+
+    const getFullName = (
+      firstName: string,
+      secondName: string,
+      thirdName: string,
+    ) => {
+      return firstName + ' ' + secondName + ' ' + thirdName;
+    };
+
+    const Cat = () => {
+      return <Text>Hello, I am {getFullName('Rum', 'Tum', 'Tugger')}!</Text>;
+    };
+
+    export default Cat;
+    ```
+  </Tab>
+  <Tab>
+    ```js
+    import React from 'react';
+    import {Text} from 'react-native';
+
+    const getFullName = (firstName, secondName, thirdName) => {
+      return firstName + ' ' + secondName + ' ' + thirdName;
+    };
+
+    const Cat = () => {
+      return <Text>Hello, I am {getFullName('Rum', 'Tum', 'Tugger')}!</Text>;
+    };
+
+    export default Cat;
+    ```
+  </Tab>  
+</Tabs>
 
 You can think of curly braces as creating a portal into JS functionality in your JSX!
 
-<Tooltip content={"Because JSX is included in the React library, it won’t work if you don’t have import React from 'react' at the top of your file!"}/>
+<Callout content={"Because JSX is included in the React library, it won’t work if you don’t have import React from 'react' at the top of your file!"}/>
 
 ## Custom Components
 You’ve already met React Native’s Core Components. React lets you nest these components inside each other to create new components. These nestable, reusable components are at the heart of the React paradigm.
@@ -115,6 +179,6 @@ Any component that renders other components is a parent component. Here, Cafe is
 
 You can put as many cats in your cafe as you like. Each `<Cat>` renders a unique element—which you can customize with props.
 
-import Button from '../../components/btn'
+import Feedback from '../../components/feedback'
 
-<Button />
+<Feedback />

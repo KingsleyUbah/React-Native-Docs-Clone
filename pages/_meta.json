@@ -1,4 +1,9 @@
 {  
+  "index": {
+    "title": "Home",
+    "type": "page",
+    "display": "hidden"
+  },
   "basics": "The Basics",
   "environment-setup": "Environment setup",
   "company": {

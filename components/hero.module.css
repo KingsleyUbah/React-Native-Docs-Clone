@@ -17,6 +17,6 @@
     align-self: baseline;    
 }
 .herolink {
-  color: '#5086B1';
-  text-decoration: underline;
+  color: '#134484';
+  border-bottom: 2px solid #134484;
 }

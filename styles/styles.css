@@ -1,0 +1,34 @@
+div.logoImage:hover #logoText {
+    color: #61DAFB !important;
+    font-size: small;
+}
+
+.logoPic {
+    animation: out 0.3s 1 linear;
+}
+
+.footerLink:hover {
+    color:  #61DAFB;
+}
+
+div.logoImage:hover .logoPic {    
+    animation: in 0.3s 1 linear;
+}
+
+@keyframes in {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes out {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

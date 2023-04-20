@@ -1,0 +1,15 @@
+.footerContainer {
+    display: 'flex';
+    font-size: 'big'; 
+    align-items:'center'; 
+    justify-content: 'space-around';
+    max-width: '100%';
+    background-color: '#20232A';
+    color: 'white';
+    padding: '23px 2rem' 
+}
+
+.footerTitle {
+    color: 'gray';
+    margin-bottom: '10px'
+}

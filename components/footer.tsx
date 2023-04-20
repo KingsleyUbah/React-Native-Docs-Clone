@@ -3,7 +3,7 @@ import styles from './footer.module.css'
 
 export function Footer() {
     return (
-    <div style={{ display: 'flex', fontSize: '0.97rem', alignItems:'center', justifyContent: 'space-around', maxWidth: '100%', backgroundColor: '#20232A', color: 'white', padding: '23px 11rem' }}>
+    <div style={{ display: 'flex', fontSize: '0.97rem', alignItems:'center', justifyContent: 'space-around', maxWidth: '100%', backgroundColor: '#20232A', color: 'white', padding: '23px 2rem' }}>
         <div>
           <h3 style={{color: 'gray', marginBottom: '10px'}}>DEVELOP</h3>
           <ul>

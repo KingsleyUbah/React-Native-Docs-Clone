@@ -32,3 +32,15 @@ div.logoImage:hover .logoPic {
         transform: rotate(0deg);
     }
 }
+
+@media all and (max-width: 500px) {
+    div.hero_hero__KMQi3 {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        height: 1000px;
+    }
+
+    div.hero_imageHero__VMrJv {
+        height: 10px;
+    }
+}
